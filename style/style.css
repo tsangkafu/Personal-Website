@@ -1,0 +1,322 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* variables and root */
+:root {
+    font-family: "Alegreya Sans SC", sans-serif !important;
+    font-size: 1.5em;
+    --orange: #ed6815;
+    --navy: #25424c;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+a{
+    text-decoration: none !important;
+    color: var(--white) !important;
+}
+
+h1{
+    font-family: "Fredericka the Great", cursive !important;
+    font-size: 1.4rem !important;
+}
+
+h2{
+    font-family: "Fredericka the Great", cursive !important;
+    font-size: 1.2rem !important;
+}
+
+body{
+    background: var(--orange) !important;
+    font-family: "Alegreya Sans SC", sans-serif !important;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+footer{
+    padding: 10px;
+    color: var(--white);
+    
+}
+
+/* css for video */
+.videoblock{
+    position: relative;
+    z-index: -1;
+}
+
+#videobg {
+    position: relative;
+    width: 100%;
+}
+
+.videodes{
+    position: relative;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px 0px;
+    padding-bottom: -10px;
+    bottom: 102px;
+}
+
+.videodes h2{
+    padding-left: 10px;
+    margin-bottom: auto;
+}
+
+.videodes p{
+    padding-left: 10px;
+    margin-bottom: auto;
+}
+
+/* Website title */
+.title{
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: var(--white);
+    display: block;
+    z-index: 1;
+}
+
+/* css for navigation bar */
+nav {
+    position: relative;
+    top: -70px;
+    margin-bottom: -50px;
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+nav a{
+    font-size: 0.5em;
+}
+
+nav a:hover{
+    color: var(--navy);
+}
+
+/** css for resume div **/
+.resume{
+    background: var(--navy);
+    color: var(--white);
+    grid-column: 1/4;
+    grid-row: 1;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 50px;
+}
+
+.resume section{
+    grid-column: 2/4;
+    grid-row: 1;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#profilepic {
+    grid-column: 1/2;
+    grid-row: 1;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.resume article{
+    grid-column: 1/4;
+    grid-row: 2;
+    display: grid;
+    align-content: center;
+    font-family: "Alegreya Sans SC", sans-serif !important;
+    font-size: 1.2rem !important;
+}
+
+/** css for artwork div **/
+carousel img{
+    width:100%;
+    height:60vh;
+    object-fit: cover;
+}
+
+.artwork{
+    grid-column: 1/4;
+    background: var(--orange) !important;
+    color: var(--white);
+    display: grid;
+    text-align: center;
+}
+
+.artwork article{
+    margin: 20px 0px;
+    display: grid
+}
+
+.artwork h1{
+    margin-bottom: auto;
+}
+
+.artwork p {
+    margin-bottom: auto;
+}
+
+#boxingvideo{
+    position: relative;
+    width: 100%;
+}
+
+.collage {
+    margin-top: 20px;
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1f1);
+    grid-gap: 20px;
+}
+
+figure {
+    background: var(--black);
+    padding: 20px 20px 10px 20px;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+figurecaption{
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+}
+
+figure img{
+    width: 100%;
+}
+
+figure:hover{
+    transform: scale(1.2);
+    animation-play-state: running;
+}
+
+/** css for contact div **/
+
+.contact{
+    background: var(--navy);
+    color: var(--white);
+    grid-column: 1/4;
+}
+
+form{
+    grid-column: 1/4;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+sup{
+    color: var(--orange);
+}
+
+input[type="submit"]{
+    padding: 20px;
+    font-family: "Fredericka the Great", cursive !important;
+}
+
+input[type="submit"]:hover{
+    background: var(--orange);
+    color: var(--navy);
+}
+
+/* accessibility */ 
+input:focus, textarea:focus, video:focus{
+    outline: 3;
+    outline-color: var(--orange) !important;
+}
+
+a:focus{
+    color: var(--navy) !important;
+    border: 1px;
+}
+
+.pointer{
+    cursor: pointer;
+        }
+
+/* responsive design */
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 1.2em !important;
+    }
+    .videodes{
+        bottom: 80px;
+    }
+    h1{
+        font-size: 1.2rem !important;
+    }
+    h2{
+        font-size: 1rem !important;
+    }
+    nav{
+        margin-bottom: -65px;
+        top: -68px;
+    }
+    .collage{
+        grid-template-columns: 1fr;
+    }
+    figure:hover{
+        transform: scale(1);
+    }
+
+}
