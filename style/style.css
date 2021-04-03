@@ -285,6 +285,11 @@ input:focus, textarea:focus, video:focus{
     outline-color: var(--orange) !important;
 }
 
+input[type="submit"]:focus{
+    background: var(--orange);
+    color: var(--navy);
+}
+
 a:focus{
     color: var(--navy) !important;
     border: 1px;
